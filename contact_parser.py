@@ -93,6 +93,7 @@ def main():
         row = contact_info.iloc[i]
         if not verify_row(row):
             print("Skipping {row['first name']} {row['last name']}")
+            continue
         output += vcard_format.format(email=row['email'], 
                                       number=row['phone'], 
                                       fname=row['first name'], 
